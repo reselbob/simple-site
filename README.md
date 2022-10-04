@@ -22,3 +22,6 @@ You'll output similar to the following:
 In a web browser enter the following URL:
 
 `http://localhost:8080`
+
+
+![localhost](https://user-images.githubusercontent.com/1110569/193900809-922f3c56-a6b6-4de3-bfac-310e70f98f94.png)
