@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Simple Site</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
+
 <body>
-<h1>Hello from Simple Site!</h1>
+    <table>
+        <tr>
+            <td colspan="2">
+                <h1>Super secret message generator</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>Your Name: </td>
+            <td><input type="text" id="yourName"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id='btnMessage' type="button" onclick="getMessage()">Get secret message</button></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h1 id="msgHeading"></h1>
+            </td>
+        </tr>
+    </table>
 </body>
+<script>
+    function getMessage() {
+        const name = document.getElementById('yourName').value
+        document.getElementById('msgHeading').innerHTML = 'Hello ' + name;
+    }
+</script>
+
 </html>
