@@ -1,0 +1,10 @@
+version: "3"
+virtualmachines:
+  - name: selenium-vm
+    image: ubuntu-os-pro-cloud/ubuntu-pro-2204-lts
+    shell: /bin/bash
+    machine_type: n1-standard-1
+    allow_external_ingress:
+      - http
+      - https
+      - high-ports
