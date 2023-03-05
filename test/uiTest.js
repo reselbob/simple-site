@@ -1,7 +1,4 @@
 const chromeDriver = require('selenium-webdriver/chrome');
-
-// Headless is supported in Chrome >= 58. Not currently stable, so using dev
-// build.
 const CHROME_BIN_PATH = '/usr/bin/google-chrome';
 
 const options = new chromeDriver.Options();
