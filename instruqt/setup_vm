@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+until snap install node --classic; do
+  echo Download disrupted, resuming in 5 seconds...
+  sleep 5
+done
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+until sudo apt -f install -y; do
+  echo Download disrupted, resuming in 5 seconds...
+  sleep 5
+done
+
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+echo "export NODE_OPTIONS=--openssl-legacy-provider" >> /root/.bashrc
+
+echo "Environment prepared. You're good to go!"
