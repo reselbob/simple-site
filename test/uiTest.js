@@ -35,10 +35,14 @@ const seleniumTest = async (driver) => {
     const name = "Bob";
     await driver.get("http://www.localhost:8080/")
     await driver.manage().window().setRect({width: 600, height: 600})
+    //click in the text box
     await driver.findElement(By.id("yourName")).click()
+    // type to name into the textbox
     await driver.findElement(By.id("yourName")).sendKeys(name)
+    //click the Get secret message textbox
     await driver.findElement(By.id("btnMessage")).click()
     const txtValue = await driver.findElement(By.id("yourName")).getText();
     const msgValue = await driver.findElement(By.id("msgHeading")).getText();
+    //Compare the actual output to the expected output
     assert.equal(msgValue, 'Hello ' + name, 'The text is not as expected');
 }
